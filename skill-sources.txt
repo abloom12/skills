@@ -1,0 +1,2 @@
+https://github.com/tanstack-skills/tanstack-skills tanstack-query
+https://github.com/tanstack-skills/tanstack-skills tanstack-router
