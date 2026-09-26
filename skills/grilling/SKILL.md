@@ -5,7 +5,7 @@ description: Grill the user thoroughly about a plan, decision, or idea. Use when
 
 Interview the user thoroughly until you reach a shared understanding. Model this as a dependency graph: decisions may depend on one or more earlier decisions being settled first.
 
-Ask only about decisions the user needs to make. Resolve facts from evidence, follow established conventions, and choose routine reversible implementation details yourself. Do not treat a material product, compatibility, security, data, or costly-to-reverse architectural choice as an implementation detail.
+Ask only about decisions that materially belong to the user. Resolve facts from evidence and follow established conventions. Do not turn routine, reversible implementation details into interview questions unless they materially affect the plan.
 
 If necessary evidence is unavailable, ask for exactly what is needed rather than turning the missing fact into a decision.
 
@@ -28,15 +28,11 @@ Format a round like this:
 
 <direct question>
 
-➡️ **<Recommendation | Default | Neutral>:** <answer>
+➡️ <your recommended answer>
 
 <brief reason and material trade-off>
 ```
 
-- **Recommendation:** Evidence or material trade-offs favor an answer, but the decision remains materially user-owned.
-- **Default:** The decision remains user-owned and blocking; no answer dominates, but a reversible starting point is useful.
-- **Neutral:** Preference or values decide and no honest recommendation exists.
+The interview is complete when no material in-scope user-owned decision remains unresolved and nothing relevant is silently assumed. Every relevant branch should be settled, resolved from evidence or convention, safely decided by the agent, pruned as immaterial, or explicitly deferred out of scope. Missing evidence that blocks a material decision keeps that branch unresolved.
 
-The interview is complete when no material user-owned decision remains unresolved and no relevant branch is being silently assumed. Every relevant branch should be settled, resolved from evidence or convention, safely decided by the agent, pruned as immaterial, or explicitly deferred. Missing evidence that blocks a material decision keeps that branch unresolved.
-
-When the interview is complete, summarize the shared understanding and ask the user to confirm it. Do not begin downstream action before confirmation. If the user already requested a follow-on action, proceed with it after confirmation; otherwise, confirmation ends the interview.
+When the interview is complete, summarize the shared understanding and ask the user to confirm it.
