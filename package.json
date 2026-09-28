@@ -1,0 +1,20 @@
+{
+  "name": "skills",
+  "private": "true",
+  "description": "My custom pi package, includes my skills and extensions.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abloom12/skills"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.34.5",
+  "pi": {
+    "extensions": [],
+    "skills": [
+      "./skills"
+    ],
+    "themes": [
+      "./themes/catppuccin-macchiato.json"
+    ]
+  }
+}
